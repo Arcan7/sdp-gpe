@@ -26,12 +26,12 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'sql207.byetcluster.com',
-        'username'     => '36927397_6',
-        'password'     => 'qp5Z8S[8f@',
-        'database'     => 'if0_36927397_587',
+        'hostname'     => 'localhost',
+        'username'     => 'sdp_gpe',
+        'password'     => 'root',
+        'database'     => '',
         'DBDriver'     => 'MySQLi',
-        'DBPrefix'     => 'zh',
+        'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
         'charset'      => 'utf8mb4',
