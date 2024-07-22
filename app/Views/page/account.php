@@ -22,12 +22,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Account</h1>
+            <h1>Compte</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item">Configuration</li>
-                    <li class="breadcrumb-item active">Account</li>
+                    <li class="breadcrumb-item active">Compte</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -38,7 +38,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Account</h5>
+                            <h5 class="card-title">Compte</h5>
 
                             <?= $this->include('section/account/create.php') ?>
 
@@ -47,10 +47,10 @@
                                 <thead>
                                     <tr>
                                         <th>UID</th>
-                                        <th>Username</th>
+                                        <th>Nom d'utilisateur</th>
                                         <th>Email</th>
                                         <th>Role</th>
-                                        <th>Created_at</th>
+                                        <th>Créé à</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -63,10 +63,7 @@
                                             <td><?= $user['role'] ?></td>
                                             <td><?= $user['created_at'] ?></td>
                                             <td>
-                                                <a href="<?= base_url('users/edit/' . $user['uid']) ?>" class="btn btn-sm btn-primary">Edit</a>
-                                                <form action="<?= base_url('configuration/account/delete/' . $user['uid']) ?>" method="post" class="d-inline">
-                                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                                </form>
+                                                <a href="<?= base_url('users/edit/' . $user['uid']) ?>" class="btn btn-sm btn-primary">Details</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

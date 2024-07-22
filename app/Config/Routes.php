@@ -35,6 +35,10 @@ $routes->get('/configuration/employees', 'EmployeeController::index');
 $routes->post('/configuration/employees', 'EmployeeController::store');
 $routes->post('/configuration/employees/delete/(:num)', 'EmployeeController::delete/$1');
 
+
+// Profil routes
+$routes->get('/settings/profil', 'ProfilController::index');
+
 // User routes
 $routes->get('/users', 'UserController::index');
 // $routes->get('/users/create', 'UserController::create');

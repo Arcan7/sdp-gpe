@@ -50,9 +50,9 @@ class EmployeeController extends BaseController
         // $employee = $this->employeeModel->find($user['employees_id']);
 
         // Récupérer les informations du formulaire
-        $matricule = $this->request->getPost('matricule');
         $first_name = $this->request->getPost('first_name');
         $last_name = $this->request->getPost('last_name');
+        $last_name = strtoupper($last_name);
         $cin = $this->request->getPost('cin');
         $project = $this->request->getPost('project');
         $title = $this->request->getPost('title');
@@ -65,7 +65,6 @@ class EmployeeController extends BaseController
 
         // Créer un tableau associatif avec les informations
         $data = [
-            'matricule' => $matricule,
             'first_name' => $first_name,
             'last_name' => $last_name,
             'cin' => $cin,

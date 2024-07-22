@@ -9,7 +9,6 @@ class EmployeeModel extends Model
     protected $table = 'employees';
     protected $primaryKey = 'employee_id';
     protected $allowedFields = [
-        'matricule',
         'first_name',
         'last_name',
         'cin',
@@ -18,7 +17,6 @@ class EmployeeModel extends Model
         'title',
         'phone',
         'addr',
-        'department',
         'localisation',
         'status',
         'onboarding',

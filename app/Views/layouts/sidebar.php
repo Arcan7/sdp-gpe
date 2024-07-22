@@ -12,7 +12,7 @@
         <li class="nav-heading">Settings</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed disabled" href="users-profile.html">
+            <a class="nav-link collapsed" href="<?= base_url('settings/profil') ?>">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
             </a>

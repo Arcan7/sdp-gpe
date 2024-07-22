@@ -22,12 +22,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Employees</h1>
+            <h1>Employé(es)</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item">Configuration</li>
-                    <li class="breadcrumb-item active">Employees</li>
+                    <li class="breadcrumb-item active">Employé(es)</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -38,7 +38,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Employees</h5>
+                            <h5 class="card-title">Employé(es)</h5>
 
                             <?= $this->include('section/employee/create.php')?>
 
@@ -47,11 +47,10 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Matricule</th>
-                                        <th>Name</th>
+                                        <th>Nom</th>
                                         <th>CIN</th>
-                                        <th>Project</th>
-                                        <th>Title</th>
+                                        <th>Projet</th>
+                                        <th>Titre</th>
                                         <th>Localisation</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -61,7 +60,6 @@
                                     <?php foreach ($employees as $employee): ?>
                                         <tr>
                                             <td><?= $employee['employee_id'] ?></td>
-                                            <td><?= $employee['matricule'] ?></td>
                                             <td><?= $employee['first_name'] .' '. $employee['last_name'] ?></td>
                                             <td><?= $employee['cin'] ?></td>
                                             <td><?= $employee['project'] ?></td>
@@ -69,8 +67,7 @@
                                             <td><?= $employee['location'] ?></td>
                                             <td><?= $employee['status'] ?></td>
                                             <td>
-                                                <a href="<?= base_url('configuration/employees/details/' . $employee['employee_id']) ?>" class="btn btn-primary btn-sm">Edit</a>
-                                                <a href="<?= base_url('configuration/employees/delete/' . $employee['employee_id']) ?>" class="btn btn-danger btn-sm">Delete</a>
+                                                <a href="<?= base_url('configuration/employees/details/' . $employee['employee_id']) ?>" class="btn btn-primary btn-sm">Details</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

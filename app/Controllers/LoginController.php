@@ -41,12 +41,12 @@ class LoginController extends BaseController
         $user = $model->where('username', $username)->first();
 
         if (!$user) {
-            $session->setFlashdata('error', 'Username not found');
+            $session->setFlashdata('error', 'Nom d\'utilisateur introuvable');
             return redirect()->to('/auth/login');
         }
 
         if (!password_verify($password, $user['password'])) {
-            $session->setFlashdata('error', 'Password is incorrect');
+            $session->setFlashdata('error', 'Le mot de passe est incorrect');
             return redirect()->to('/auth/login');
         }
 
