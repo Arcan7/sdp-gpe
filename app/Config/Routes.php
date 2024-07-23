@@ -35,9 +35,11 @@ $routes->get('/configuration/employees', 'EmployeeController::index');
 $routes->post('/configuration/employees', 'EmployeeController::store');
 $routes->post('/configuration/employees/delete/(:num)', 'EmployeeController::delete/$1');
 
-
 // Profil routes
 $routes->get('/settings/profil', 'ProfilController::index');
+
+// Faq routes
+$routes->get('/pages/faq', 'FaqController::index');
 
 // User routes
 $routes->get('/users', 'UserController::index');

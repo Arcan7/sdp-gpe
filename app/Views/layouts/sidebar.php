@@ -42,7 +42,7 @@
         </li> <!-- End Configuration Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed disabled" href="pages-faq.html">
+            <a class="nav-link collapsed" href="<?= base_url('pages/faq') ?>">
                 <i class="bi bi-question-circle"></i>
                 <span>F.A.Q</span>
             </a>

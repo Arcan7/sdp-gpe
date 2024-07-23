@@ -19,4 +19,11 @@ class UserModel extends Model
         'employees_id'
     ];
     protected $useTimestamps = true;
+
+    // Méthode pour récupérer les nombre d'utilisateurs avec le rôle "Admin"
+    public function countAdmins()
+    {
+        return $this->where('role', 'Admin')->countAllResults();
+    }
+
 }

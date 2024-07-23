@@ -123,7 +123,6 @@ if (isset($employees) && !empty($employees)) {
                                             <div class="col-lg-3 col-md-4 label">Email</div>
                                             <div class="col-lg-9 col-md-8"><?= esc(session()->get('user')['email']) ?></div>
                                         </div>
-
                                     </div>
 
                                     <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
@@ -233,7 +232,7 @@ if (isset($employees) && !empty($employees)) {
                                             </div>
 
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                <button type="submit" class="btn btn-primary">Enregistrer</button>
                                             </div>
                                         </form><!-- End settings Form -->
 
@@ -244,28 +243,28 @@ if (isset($employees) && !empty($employees)) {
                                         <form>
 
                                             <div class="row mb-3">
-                                                <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                                                <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Mot de passe actuel</label>
                                                 <div class="col-md-8 col-lg-9">
                                                     <input name="password" type="password" class="form-control" id="currentPassword">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
-                                                <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                                                <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">nouveau mot de passe</label>
                                                 <div class="col-md-8 col-lg-9">
                                                     <input name="newpassword" type="password" class="form-control" id="newPassword">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
-                                                <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                                                <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Ré-entrez le nouveau mot de passe</label>
                                                 <div class="col-md-8 col-lg-9">
                                                     <input name="renewpassword" type="password" class="form-control" id="renewPassword">
                                                 </div>
                                             </div>
 
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Change Password</button>
+                                                <button type="submit" class="btn btn-primary">Changer le mot de passe</button>
                                             </div>
                                         </form><!-- End Change Password Form -->
 

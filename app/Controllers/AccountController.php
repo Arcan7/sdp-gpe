@@ -26,9 +26,19 @@ class AccountController extends BaseController
         if (!$session->has('user')) {
             return redirect()->to('/auth/login');
         }
-        
+
         $data['users'] = $this->usersModel->findAll();
-        $data['employees'] = $this->employeeModel->findAll();
+
+        // Obtenez tous les employés
+        $employees = $this->employeeModel->findAll();
+
+        // Filtrer les employés sans compte
+        $employeesWithoutAccount = array_filter($employees, function ($employee) {
+            return !$this->usersModel->where('employees_id', $employee['employee_id'])->first();
+        });
+
+        $data['employees'] = $employeesWithoutAccount;
+
         return view('page/account', $data);
     }
 
@@ -50,7 +60,7 @@ class AccountController extends BaseController
         $password = password_hash($password, PASSWORD_BCRYPT);
         $role = $this->request->getPost('role');
         $employee_id = $this->request->getPost('employee_id');
-        
+
         $data = [
             'username' => $username,
             'email' => $email,
